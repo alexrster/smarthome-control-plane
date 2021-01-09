@@ -14,7 +14,7 @@ export class GGIconButton extends SwitchButton {
 
   render() {
     return (
-      <div className="SwitchButton" onClick={() => this.setState({ value: !this.state.value })}>
+      <div className="DashboardButton" onClick={() => this.setState({ value: !this.state.value })}>
         <div className="bg"></div>
         <div className="content">
           <div className={'gg gg-' + this.getGGClass()}></div>

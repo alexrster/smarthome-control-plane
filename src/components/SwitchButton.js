@@ -13,7 +13,7 @@ export class SwitchButton extends React.Component {
 
   render() {
     return (
-      <div className="SwitchButton">
+      <div className="DashboardButton">
         <div className="bg"></div>
         <div className="content">
           {this.props.children}

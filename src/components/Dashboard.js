@@ -1,6 +1,4 @@
 import React from 'react';
-import { SwitchButton } from './SwitchButton';
-import { ToggleButton } from './ToggleButton';
 import { GGIconButton, GGToggleButton } from './GGButton';
 
 // eslint-disable-next-line no-unused-vars

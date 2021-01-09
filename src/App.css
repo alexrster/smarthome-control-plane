@@ -55,7 +55,7 @@
   }
 }
 
-.SwitchButton {
+.DashboardButton {
   display: block;
   position: relative;
   float: left;
@@ -67,11 +67,11 @@
   margin: 10pt;
 }
 
-.SwitchButton:hover {
+.DashboardButton:hover {
   cursor: pointer;
 }
 
-.SwitchButton div.bg {
+.DashboardButton div.bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -82,7 +82,7 @@
   z-index: 10;
 }
 
-.SwitchButton div.content {
+.DashboardButton div.content {
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -96,12 +96,12 @@
   color: darkorange;
 }
 
-.SwitchButton .gg {
+.DashboardButton .gg {
   --ggs: 4;
   top: 50%;
   left: 50%;
 }
 
-.SwitchButton .gg.active {
+.DashboardButton .gg.active {
   color: darkorange;
 }

@@ -25,7 +25,7 @@ export class ToggleButton extends React.Component {
     }
 
     return (
-      <div className="SwitchButton ToggleButton" onClick={() => this.setState({ value: !this.state.value })}>
+      <div className="DashboardButton ToggleButton" onClick={() => this.setState({ value: !this.state.value })}>
         <div className="bg"></div>
         {content}
       </div>
