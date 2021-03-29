@@ -1,37 +1,38 @@
 import React from 'react';
-import { SwitchButton } from './SwitchButton';
+import PropTypes from "prop-types";
 
-export class GGIconButton extends SwitchButton {
+export class GGIconButton extends React.Component {
+  static propTypes = {
+    iconName: PropTypes.string,
+    value: PropTypes.object
+  }
+
   constructor(props) {
     super(props);
-
-    this.state.iconName = props.iconName;
+    this.state = {
+      data: props.data
+    };
   }
 
-  getGGClass() {   
-    return this.state.iconName;
-  }
+  getGGClassName = () => this.props.iconName;
 
-  render() {
-    return (
-      <div className="DashboardButton" onClick={() => this.setState({ value: !this.state.value })}>
-        <div className="bg"></div>
-        <div className="content">
-          <div className={'gg gg-' + this.getGGClass()}></div>
-        </div>
+  render = () =>
+    <div className="DashboardButton">
+      <div className="bg"></div>
+      <div className="content">
+        <div className={'gg gg-' + this.getGGClassName()}></div>
+        {this.state.data}
       </div>
-    );
-  }
+    </div>
 }
 
 export class GGToggleButton extends GGIconButton {
-  constructor(props) {
-    super(props);
-
-    this.state.inactiveIconName = props.inactiveIconName;
+  static propTypes = {
+    inactiveIconName: PropTypes.string
   }
 
-  getGGClass() {
-    return !!this.state.value ? this.state.iconName + ' active' : this.state.inactiveIconName + ' inactive';
-  }
+  getGGClassName = () => !!this.state.value ? this.props.iconName + ' active' : this.props.inactiveIconName + ' inactive';
 }
+
+// export const GGIconButton = subscribe({ topic: 'balcony/ventilation' })(_GGIconButton);
+// export const GGToggleButton = subscribe({ topic: 'balcony/ventilation' })(_GGToggleButton);

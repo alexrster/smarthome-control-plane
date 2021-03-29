@@ -42,6 +42,13 @@
   clear: both;
 }
 
+.Row.Bottom {
+  position: absolute;
+  bottom: 0;
+  align-items: left;
+  text-align: left;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -65,6 +72,7 @@
   color: white;
   background: none;
   margin: 10pt;
+  padding: 10pt;
 }
 
 .DashboardButton:hover {
@@ -85,11 +93,23 @@
 .DashboardButton div.content {
   position: absolute;
   overflow: hidden;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 5%;
   width: 90%;
   height: 90%;
   z-index: 20;
+}
+
+.DashboardButton.w2x {
+  width: 260pt;
+}
+
+.DashboardButton.w3x {
+  width: 390pt;
+}
+
+.DashboardButton.w4x {
+  width: 520pt;
 }
 
 .ToggleButton div.content.active {
@@ -98,10 +118,14 @@
 
 .DashboardButton .gg {
   --ggs: 4;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 45%;
 }
 
 .DashboardButton .gg.active {
   color: darkorange;
+}
+
+.highcharts-credits {
+  display: none;
 }
